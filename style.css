@@ -1,0 +1,215 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    text-align: center;
+    color: white;
+    background: black;
+    overflow: hidden;
+}
+
+
+/* stars */
+
+.stars {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: url("https://www.transparenttextures.com/patterns/stardust.png");
+    animation: starsMove 80s linear infinite;
+    pointer-events: none;
+}
+
+.twinkling {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(white 1px, transparent 1px);
+    background-size: 3px 3px;
+    opacity: 0.2;
+    animation: twinkle 4s infinite alternate;
+    pointer-events: none;
+}
+
+
+/* planet */
+
+.planet {
+    position: fixed;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+
+/* planet 1 */
+
+.planet1 {
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle at 30% 30%, #4facfe, #003366);
+    top: 10%;
+    left: -200px;
+    animation: planetMove1 60s linear infinite;
+    box-shadow: 0 0 60px #4facfe;
+}
+
+
+/* planet 2 */
+
+.planet2 {
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle at 30% 30%, #ff9966, #660000);
+    bottom: 10%;
+    right: -150px;
+    animation: planetMove2 90s linear infinite;
+    box-shadow: 0 0 50px #ff9966;
+}
+
+@keyframes planetMove1 {
+    0% {
+        left: -200px;
+    }
+    100% {
+        left: 110%;
+    }
+}
+
+@keyframes planetMove2 {
+    0% {
+        right: -150px;
+    }
+    100% {
+        right: 110%;
+    }
+}
+
+@keyframes starsMove {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 0 2000px;
+    }
+}
+
+@keyframes twinkle {
+    from {
+        opacity: 0.1
+    }
+    to {
+        opacity: 0.4
+    }
+}
+
+.title {
+    text-shadow: 0 0 20px cyan, 0 0 40px blue;
+}
+
+.start-btn {
+    font-size: 25px;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 40px;
+    background: linear-gradient(cyan, blue);
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 0 20px cyan;
+}
+
+canvas {
+    background: #02020f;
+    border: 4px solid cyan;
+    margin-top: 10px;
+    box-shadow: 0 0 20px cyan;
+}
+
+.controls button {
+    font-size: 25px;
+    padding: 15px;
+    margin: 10px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    background: linear-gradient(#00ffff, #0044ff);
+    color: white;
+    box-shadow: 0 0 15px cyan;
+}
+
+.pause {
+    background: red;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+}
+
+.resume {
+    background: green;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+}
+
+.back-btn {
+    padding: 10px 20px;
+    background: orange;
+    border: none;
+    border-radius: 10px;
+}
+
+.cool-text {
+    display: none;
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 35px;
+    font-weight: bold;
+    color: yellow;
+    text-shadow: 0 0 20px orange, 0 0 40px red;
+}
+
+.top-bar {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.menu-btn {
+    font-size: 25px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.credit-box {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 35px;
+    background: #111;
+    padding: 15px;
+    border: 2px solid cyan;
+    border-radius: 10px;
+}
+
+.back-credit {
+    margin-top: 10px;
+    padding: 8px 15px;
+    border: none;
+    background: orange;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.game-over {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #000;
+    padding: 30px;
+    border: 3px solid red;
+}

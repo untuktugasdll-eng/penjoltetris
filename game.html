@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>mukTRIS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+
+    <!-- planet animasi -->
+    <div class="planet planet1"></div>
+    <div class="planet planet2"></div>
+
+    <div class="top-bar">
+
+        <button class="menu-btn" onclick="toggleMenu()">⋮</button>
+
+        <div id="creditBox" class="credit-box">
+
+            <h3>CREDIT</h3>
+
+            <p>Ahmad Puguh</p>
+            <p>Achmad Mu Farel</p>
+            <p>Alga Satria</p>
+            <p>Daniel Renata</p>
+            <p>Dedy Alfianto</p>
+
+            <button class="back-credit" onclick="closeCredit()">← Kembali</button>
+
+        </div>
+
+    </div>
+
+    <h1 class="title">🚀 mukTRIS</h1>
+
+    <div class="score-box">
+        Score: <span id="score">0</span> | High Score: <span id="highScore">0</span>
+    </div>
+
+    <canvas id="game" width="240" height="400"></canvas>
+
+    <div id="coolText" class="cool-text">🔥 ANJIR KEREN 🔥</div>
+
+    <div id="gameOver" class="game-over">
+
+        <h2>GAME OVER</h2>
+
+        <a href="index.html">
+            <button>Kembali ke Menu</button>
+        </a>
+
+    </div>
+
+    <div class="controls">
+
+        <button onclick="moveLeft()">⬅</button>
+        <button onclick="rotate()">🔄</button>
+        <button onclick="moveRight()">➡</button>
+        <button onclick="drop()">⬇</button>
+
+    </div>
+
+    <div class="game-controls">
+
+        <button onclick="pauseGame()" class="pause">⏸ Pause</button>
+        <button onclick="resumeGame()" class="resume">▶ Resume</button>
+
+    </div>
+
+    <div class="back-menu">
+
+        <a href="index.html">
+            <button class="back-btn">🔙 Kembali</button>
+        </a>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
